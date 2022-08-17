@@ -3,43 +3,38 @@ import './NewExpenseForm.css';
 
 const NewExpenseForm = (props) => {
 
-    const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState('');
-    const [enteredDate, setEnteredDate] = useState('');
+    // const [enteredTitle, setEnteredTitle] = useState('');
+    // const [enteredAmount, setEnteredAmount] = useState('');
+    // const [enteredDate, setEnteredDate] = useState('');
 
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: '',
-    //     enteredAmount: '',
-    //     enteredDate: ''
-    // });
+    const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: ''
+    });
 
     const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     enteredTitle: event.target.vale
-        // });
-        // setUserInput((prevState) => {
-        //     return ({
-        //         ...prevState, enteredTitle: event.target.value
-        //     });
-        // });
+        // setEnteredTitle(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.vale
+        });
     };
 
     const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     enteredAmount: event.target.vale
-        // });
+        // setEnteredAmount(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredAmount: event.target.vale
+        });
     };
 
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value);
-        // setUserInput({
-        //     ...userInput,
-        //     enteredDate: event.target.vale
-        // });
+        // setEnteredDate(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredDate: event.target.vale
+        });
     };
 
     const submitHandler = (event) => {
